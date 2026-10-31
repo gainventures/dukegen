@@ -19,7 +19,7 @@ Static, single-page site. No build step. Files:
 - Contact email `hello@dukegen.org` is a placeholder. Replace it in `index.html` (3 places) with a real inbox.
 - Co-chair LinkedIn links were on the old Google Site; add them back on the cards if wanted.
 - Event calendar: add real upcoming events (date, place, registration link) to the Events section.
-- Confirm the Ga^3in Ventures wording for Sergey's card and the Found & Seek wording for Michele's card.
+- Confirm the Found & Seek wording for Michele's card.
 
 ## Affiliation notice
 

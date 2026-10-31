@@ -137,3 +137,5 @@ footer.site .legal { border-top: 1px solid rgba(255,255,255,.15); margin-top: 28
 .person .social a { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--line); color: var(--navy); transition: background .15s, color .15s, border-color .15s; }
 .person .social a:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
 .person .social svg { width: 17px; height: 17px; }
+.person { display: flex; flex-direction: column; }
+.person .social { margin-top: auto; padding-top: 14px; }
