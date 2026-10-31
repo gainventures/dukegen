@@ -131,4 +131,9 @@ footer.site .legal { border-top: 1px solid rgba(255,255,255,.15); margin-top: 28
   .join { padding: 36px 22px; }
 }
 
-.person .links { margin: 10px 0 0; font-size: 15px; }
+
+.person .avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 12px; border: 3px solid var(--paper-soft); box-shadow: 0 0 0 1px var(--line); }
+.person .social { display: flex; gap: 10px; margin-top: 14px; }
+.person .social a { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--line); color: var(--navy); transition: background .15s, color .15s, border-color .15s; }
+.person .social a:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
+.person .social svg { width: 17px; height: 17px; }
