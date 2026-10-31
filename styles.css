@@ -130,3 +130,5 @@ footer.site .legal { border-top: 1px solid rgba(255,255,255,.15); margin-top: 28
   .hero { padding: 48px 0 40px; }
   .join { padding: 36px 22px; }
 }
+
+.person .links { margin: 10px 0 0; font-size: 15px; }
