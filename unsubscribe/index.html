@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unsubscribe from DukeGEN emails</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#2f3a64">
+  <link rel="icon" href="../assets/logo-stacked.png">
+  <link rel="stylesheet" href="../styles.css?v=5">
+  <style>
+    .unsub { max-width: 520px; margin: 0 auto; padding: 12vh 16px 80px; }
+    .unsub h1 { color: var(--navy); font-size: 30px; line-height: 1.2; margin: 0 0 12px; }
+    .unsub p { color: var(--muted); margin: 0 0 24px; }
+    .unsub button.btn { cursor: pointer; font-family: inherit; }
+    .unsub button.btn[disabled] { opacity: .6; cursor: default; }
+  </style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="DukeGEN home"><img src="../assets/logo-horizontal-trim.png" alt="DukeGEN, Duke Innovation &amp; Entrepreneurship" width="167" height="44"></a>
+  </div>
+</header>
+
+<main class="unsub" id="main">
+  <h1 id="title">Unsubscribe from DukeGEN emails?</h1>
+  <p id="text">You won’t get any more emails from DukeGEN.</p>
+  <button class="btn" id="go" type="button">Unsubscribe</button>
+</main>
+
+<script>
+// Unsubscribes the opaque id from the email link. The backend is a gain.ventures function
+// (netlify/functions/dukegen-unsubscribe.js); this site is static. A plain text body keeps it
+// a simple request, so the browser sends no preflight.
+(function () {
+  var q = new URLSearchParams(location.search);
+  var u = q.get('u') || '', c = q.get('c') || '';
+  var title = document.getElementById('title'), text = document.getElementById('text'), go = document.getElementById('go');
+  function say(t, x) { title.textContent = t; text.textContent = x; }
+  if (!/^[a-f0-9]{20}$/.test(u)) {
+    say('This link isn’t complete', 'Reply to any DukeGEN email with “unsubscribe” and we’ll take you off the list.');
+    go.hidden = true;
+    return;
+  }
+  go.addEventListener('click', function () {
+    go.disabled = true;
+    fetch('https://gain.ventures/.netlify/functions/dukegen-unsubscribe?u=' + u + (c ? '&c=' + encodeURIComponent(c) : ''), {
+      method: 'POST', headers: { 'Content-Type': 'text/plain' }, body: 'page'
+    }).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      say('You’re unsubscribed', 'You won’t get any more emails from DukeGEN.');
+      go.hidden = true;
+    }).catch(function () {
+      say('We couldn’t save that', 'Please try again, or reply to any DukeGEN email with “unsubscribe”.');
+      go.disabled = false;
+    });
+  });
+})();
+</script>
+</body>
+</html>
