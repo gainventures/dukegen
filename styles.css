@@ -144,3 +144,11 @@ footer.site .legal { border-top: 1px solid rgba(255,255,255,.15); margin-top: 28
 .next-event .when { font-weight: 600; color: var(--navy); font-size: 15px; margin: 0 0 10px; }
 .next-event p { color: var(--muted); font-size: 16px; margin: 0 0 18px; }
 .next-event .tag { margin-bottom: 8px; }
+.two-col > *, .wrap > * { min-width: 0; }
+.timeline li { overflow-wrap: anywhere; }
+.history-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 0 0 36px; }
+.history-stats div { border-top: 4px solid var(--gold); padding-top: 10px; }
+.history-stats strong { display: block; font-size: 24px; color: var(--navy-deep); line-height: 1.15; font-variant-numeric: tabular-nums; }
+.history-stats span { font-size: 14px; color: var(--muted); }
+.timeline.history { max-width: 46em; }
+@media (max-width: 860px) { .history-stats { grid-template-columns: repeat(2, 1fr); } }
