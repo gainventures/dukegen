@@ -165,3 +165,8 @@ footer.site .legal { border-top: 1px solid rgba(255,255,255,.15); margin-top: 28
 .pull cite { display: block; margin-top: 6px; font-size: 13px; font-style: normal; color: var(--muted); }
 @media (max-width: 860px) { .duke-stats { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) { .duke-stats, .founders { grid-template-columns: 1fr; } }
+.invite { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: 0 0 18px; padding: 10px 14px; border: 1px solid var(--orange); border-radius: 12px; background: #fff7ef; text-decoration: none; color: var(--ink); font-size: 15px; }
+.invite:hover { background: #ffeedd; }
+.invite-tag { background: var(--orange); color: #fff; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; padding: 3px 8px; border-radius: 999px; }
+.invite-text { font-weight: 600; color: var(--navy-deep); }
+.invite-cta { font-weight: 700; color: var(--orange); }
