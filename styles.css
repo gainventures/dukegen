@@ -34,7 +34,7 @@ header.site {
   background: var(--paper); border-bottom: 1px solid var(--line);
 }
 header.site .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 16px; }
-header.site .brand img { height: 44px; width: auto; }
+header.site .brand img { height: 30px; width: auto; }
 nav.main ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; }
 nav.main a { text-decoration: none; font-weight: 600; font-size: 15px; color: var(--navy); }
 nav.main a:hover { color: var(--orange); }
@@ -125,7 +125,7 @@ footer.site .legal { border-top: 1px solid rgba(255,255,255,.15); margin-top: 28
   nav.main li:nth-child(n+4) { display: none; }
 }
 @media (max-width: 480px) {
-  header.site .brand img { height: 36px; }
+  header.site .brand img { height: 26px; }
   nav.main { display: none; }
   .hero { padding: 48px 0 40px; }
   .join { padding: 36px 22px; }
